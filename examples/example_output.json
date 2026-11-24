@@ -1,0 +1,42 @@
+{
+  "case_id": "DEMO-NOT-A-REAL-CASE",
+  "status": "success",
+  "note": "示意输出，非真实案例结果；笔记内容、数值与锚点均为占位示意，不代表任何真实论文。",
+  "artifact": {
+    "section_skeleton": [
+      {"section_id": "S2", "level": 1, "number": "2", "title": "Method", "page": 2, "transition_from": "S1", "transition_to": "S3"}
+    ],
+    "section_notes": [
+      {"section_id": "S2", "purpose": "（示意）提出方法", "method": "（示意）使用 X", "result": "（示意）在 Y 上提升", "conclusion": "（示意）X 有效", "source_anchor": {"section": "S2", "paragraph": 1, "page": 2}}
+    ],
+    "paper_card": {
+      "research_question": "（示意）如何提升 Y？",
+      "data": "（示意）数据集 D，规模 N",
+      "method": "（示意）方法 X",
+      "method_conditions": "（示意）假设输入满足 Z",
+      "main_findings": ["（示意）在 D 上提升 3%"],
+      "limitations": ["原文未报告"],
+      "conclusion_preconditions": ["（示意）仅当满足 Z 时成立"]
+    },
+    "knowledge_points": [
+      {"kp_id": "K1", "term": "representation learning", "type": "concept", "definition": "（示意）", "aliases": ["表示学习"], "source_anchor": {"section": "S2", "page": 2}}
+    ]
+  },
+  "term_registry": [
+    {"term": "representation learning", "abbreviation": "RL", "aliases": ["表示学习"], "normalized": "表示学习", "note": "（示意）缩写 RL 与强化学习歧义，已消解"}
+  ],
+  "source_anchor_map": [
+    {"note_id": "S2-result", "claim": "（示意）在 D 上提升 3%", "section": "S2", "paragraph": 2, "page": 3, "figure_table": "表1", "basis": "原文段落与表1"}
+  ],
+  "uncertainties": ["局限字段原文未报告", "示例位置与数值为占位，实际以真实论文为准"],
+  "human_review_items": ["确认缩写 RL 在本文的具体所指"],
+  "change_log": [
+    {"step": 2, "action": "补充 conclusion_preconditions 字段", "reason": "初版遗漏结论成立的前提"}
+  ],
+  "self_check": {
+    "skeleton_aligned": true,
+    "fields_complete": true,
+    "anchors_valid": true,
+    "reusable": true
+  }
+}
