@@ -1,0 +1,15 @@
+{
+  "case_id": "DEMO-NOT-A-REAL-CASE",
+  "note": "以下为演示接口的虚构示例，非官方测试案例，不构成正式答案。论文标题、字段与位置均为占位示意。",
+  "task": "按论文本身章节做结构化笔记，包含研究问题/数据/方法条件/主要发现/局限及前提，每条笔记标章节页码出处",
+  "params": {
+    "granularity": "section",
+    "language": "zh",
+    "need_fields": ["research_question", "data", "method_conditions", "main_findings", "limitations", "preconditions"],
+    "anchor_required": true
+  },
+  "materials": {
+    "paper": "/input/materials/demo_paper.pdf",
+    "task_md": "/input/task.md"
+  }
+}
