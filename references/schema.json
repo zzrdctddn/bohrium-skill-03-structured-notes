@@ -1,0 +1,62 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "section-aligned-notes-builder result.json",
+  "type": "object",
+  "required": ["case_id", "status", "artifact", "source_anchor_map", "self_check"],
+  "properties": {
+    "case_id": { "type": "string" },
+    "status": { "enum": ["success", "partial", "blocked"] },
+    "artifact": {
+      "type": "object",
+      "required": ["section_skeleton", "section_notes", "paper_card", "knowledge_points"],
+      "properties": {
+        "section_skeleton": { "type": "array", "items": { "type": "object" } },
+        "section_notes": { "type": "array", "items": { "type": "object" } },
+        "paper_card": {
+          "type": "object",
+          "required": ["research_question", "data", "method", "method_conditions", "main_findings", "limitations", "conclusion_preconditions"],
+          "properties": {
+            "research_question": { "type": "string" },
+            "data": { "type": "string" },
+            "method": { "type": "string" },
+            "method_conditions": { "type": "string" },
+            "main_findings": { "type": "array", "items": { "type": "string" } },
+            "limitations": { "type": "array", "items": { "type": "string" } },
+            "conclusion_preconditions": { "type": "array", "items": { "type": "string" } }
+          }
+        },
+        "knowledge_points": { "type": "array", "items": { "type": "object" } }
+      }
+    },
+    "term_registry": { "type": "array", "items": { "type": "object" } },
+    "source_anchor_map": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["note_id", "claim", "section", "page", "basis"],
+        "properties": {
+          "note_id": { "type": "string" },
+          "claim": { "type": "string" },
+          "section": { "type": "string" },
+          "paragraph": { "type": "integer" },
+          "page": { "type": "integer" },
+          "figure_table": { "type": "string" },
+          "basis": { "type": "string" }
+        }
+      }
+    },
+    "uncertainties": { "type": "array", "items": { "type": "string" } },
+    "human_review_items": { "type": "array", "items": { "type": "string" } },
+    "change_log": { "type": "array", "items": { "type": "object" } },
+    "self_check": {
+      "type": "object",
+      "required": ["skeleton_aligned", "fields_complete", "anchors_valid", "reusable"],
+      "properties": {
+        "skeleton_aligned": { "type": "boolean" },
+        "fields_complete": { "type": "boolean" },
+        "anchors_valid": { "type": "boolean" },
+        "reusable": { "type": "boolean" }
+      }
+    }
+  }
+}
